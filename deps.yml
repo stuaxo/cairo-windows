@@ -1,0 +1,10 @@
+version: 3
+dependencies:
+- type: git
+  settings:
+    remotes:
+      https://github.com/pygobject/pycairo.git:
+        replace_in_files:
+        - filename: build-cairo-windows.sh
+          pattern: CAIRO_VERSION=cairo-(\S+)
+          tag_prefix: v
