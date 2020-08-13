@@ -1,9 +1,10 @@
 name: deps
 
 on:
-  workflow_dispatch: {}
-#  schedule:
-#  - cron: 0 0 * * *
+  repository_dispatch:
+    types: deps
+  schedule:
+  - cron:  '*/15 * * * *'
 
 jobs:
   deps:
