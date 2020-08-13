@@ -3,11 +3,10 @@ dependencies:
 - type: git
   settings:
     remotes:
-#       https://github.com/freedesktop/cairo.git:
-#         replace_in_files:
-#         - filename: build-cairo-windows.sh
-#           pattern: CAIRO_VERSION=cairo-(\S+)
-#           tag_prefix: v
+      git://anongit.freedesktop.org/git/cairo:
+         replace_in_files:
+         - filename: build-cairo-windows.sh
+           pattern: CAIRO_VERSION=cairo-(\S+)
       https://github.com/freedesktop/pixman.git:
         replace_in_files:
         - filename: build-cairo-windows.sh
