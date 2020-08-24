@@ -1,7 +1,16 @@
 name: deps
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
+  repository_dispatch:
+    types: [deps]
   schedule:
   - cron: 0 5 * * *
 
